@@ -7,7 +7,7 @@ USER nonroot
 
 WORKDIR /app
 COPY config /app/config
-COPY app /app/app
+COPY communicator /app/communicator
 EXPOSE 8080
 
-CMD ["/app/app", "serve"]
+CMD ["/app/communicator", "serve"]
