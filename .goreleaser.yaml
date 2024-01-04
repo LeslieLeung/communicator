@@ -1,0 +1,33 @@
+# Make sure to check the documentation at https://goreleaser.com
+project_name: app
+before:
+  hooks:
+    - go mod tidy
+builds:
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - windows
+      - darwin
+archives:
+  - name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+    format_overrides:
+      - goos: windows
+        format: zip
+dockers:
+  - image_templates:
+      - leslieleung/gin-application-template:{{ .Tag }}
+      - leslieleung/gin-application-template:latest
+    extra_files:
+      - .
+checksum:
+  name_template: 'checksums.txt'
+snapshot:
+  name_template: "{{ incpatch .Version }}-next"
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - '^docs:'
+      - '^test:'

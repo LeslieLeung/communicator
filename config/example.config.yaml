@@ -1,0 +1,5 @@
+app:
+  port: 8080
+
+database:
+  dsn: <user>:<pass>@tcp(<host>:<port>)/<dbname>?charset=utf8mb4&parseTime=True&loc=Local # modify this
