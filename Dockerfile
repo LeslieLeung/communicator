@@ -6,7 +6,6 @@ RUN addgroup -S nonroot \
 USER nonroot
 
 WORKDIR /app
-COPY config /app/config
 COPY communicator /app/communicator
 EXPOSE 8080
 

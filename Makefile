@@ -1,5 +1,5 @@
 run:
-	go run main.go serve -c config/test.config.yaml
+	go run main.go serve
 
 swag:
 	swag init -g cmd/app/main.go

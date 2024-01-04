@@ -9,23 +9,19 @@ type Config struct {
 var config *Config
 
 // Init creates a new Config instance.
-func Init(configPath string) {
-	New(configPath)
+func Init(options ...Options) {
+	config = New(options...)
 }
 
 // New creates a new Config instance.
-func New(configPath string) *Config {
-	if config == nil {
-		config = &Config{
-			vp: viper.New(),
-		}
-		config.vp.SetConfigFile(configPath)
-		err := config.vp.ReadInConfig()
-		if err != nil {
-			panic(err)
-		}
+func New(options ...Options) *Config {
+	cfg := &Config{
+		vp: viper.New(),
 	}
-	return config
+	for _, opt := range options {
+		opt.apply(cfg)
+	}
+	return cfg
 }
 
 // GetConfig returns the Config instance.

@@ -15,12 +15,16 @@ var ServeCmd = &cobra.Command{
 
 func runServe(cmd *cobra.Command, args []string) {
 	log.Init()
-	configPath, _ := cmd.Flags().GetString("config")
-	config.Init(configPath)
-	database.Init(config.GetConfig().GetString("database.dsn"))
+	config.Init(
+		config.WithAutomaticEnv(),
+		config.WithEnvPrefix("communicator"),
+		config.WithDefaultValues(map[string]interface{}{
+			"port": 8080,
+		}),
+	)
+	database.Init(config.GetConfig().GetString("dsn"))
 	route.StartRouter()
 }
 
 func init() {
-	ServeCmd.Flags().StringP("config", "c", "config/example.config.yaml", "config file path")
 }
