@@ -1,10 +1,10 @@
 package app
 
 import (
-	"github.com/leslieleung/gin-application-template/internal/route"
-	"github.com/leslieleung/gin-application-template/pkg/config"
-	"github.com/leslieleung/gin-application-template/pkg/database"
-	"github.com/leslieleung/gin-application-template/pkg/log"
+	"github.com/leslieleung/communicator/internal/route"
+	"github.com/leslieleung/communicator/pkg/config"
+	"github.com/leslieleung/communicator/pkg/database"
+	"github.com/leslieleung/communicator/pkg/log"
 	"github.com/spf13/cobra"
 )
 

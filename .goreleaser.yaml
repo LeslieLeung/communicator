@@ -1,5 +1,5 @@
 # Make sure to check the documentation at https://goreleaser.com
-project_name: app
+project_name: communicator
 before:
   hooks:
     - go mod tidy
@@ -17,8 +17,8 @@ archives:
         format: zip
 dockers:
   - image_templates:
-      - leslieleung/gin-application-template:{{ .Tag }}
-      - leslieleung/gin-application-template:latest
+      - leslieleung/{{ .ProjectName }}:{{ .Tag }}
+      - leslieleung/{{ .ProjectName }}:latest
     extra_files:
       - .
 checksum:

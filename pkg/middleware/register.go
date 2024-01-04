@@ -6,7 +6,7 @@ import (
 	"github.com/gin-contrib/requestid"
 	ginzap "github.com/gin-contrib/zap"
 	"github.com/gin-gonic/gin"
-	"github.com/leslieleung/gin-application-template/pkg/log"
+	"github.com/leslieleung/communicator/pkg/log"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 	"io"

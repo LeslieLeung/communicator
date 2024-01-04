@@ -3,8 +3,8 @@ package middleware
 import (
 	"context"
 	"github.com/gin-contrib/graceful"
-	contextutils "github.com/leslieleung/gin-application-template/pkg/context"
-	"github.com/leslieleung/gin-application-template/pkg/database"
+	contextutils "github.com/leslieleung/communicator/pkg/context"
+	"github.com/leslieleung/communicator/pkg/database"
 	healthcheck "github.com/tavsec/gin-healthcheck"
 	"github.com/tavsec/gin-healthcheck/checks"
 	healthcheckcfg "github.com/tavsec/gin-healthcheck/config"

@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/leslieleung/gin-application-template/cmd"
+	"github.com/leslieleung/communicator/cmd"
 )
 
 func main() {

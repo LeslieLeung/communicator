@@ -2,7 +2,7 @@ package controller
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/leslieleung/gin-application-template/pkg/log"
+	"github.com/leslieleung/communicator/pkg/log"
 )
 
 // PingPong godoc

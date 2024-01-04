@@ -2,7 +2,7 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/leslieleung/gin-application-template/cmd/app"
+	"github.com/leslieleung/communicator/cmd/app"
 	"github.com/spf13/cobra"
 	"os"
 )

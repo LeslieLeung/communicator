@@ -1,4 +1,4 @@
-module github.com/leslieleung/gin-application-template
+module github.com/leslieleung/communicator
 
 go 1.21
 
