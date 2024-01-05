@@ -20,7 +20,7 @@ func StartRouter() {
 	defer stop()
 
 	r, err := graceful.Default(
-		graceful.WithAddr(":" + strconv.Itoa(config.GetConfig().GetInt("app.port"))),
+		graceful.WithAddr(":" + strconv.Itoa(config.GetConfig().GetInt("port"))),
 	)
 	if err != nil {
 		panic(err)
